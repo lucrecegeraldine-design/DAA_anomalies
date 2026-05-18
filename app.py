@@ -1,7 +1,7 @@
-st.write("TEST GITHUB SYNC")
 import streamlit as st
 import pandas as pd
 import numpy as np
+
 
 # =====================================================
 # CONFIGURATION PAGE
@@ -79,8 +79,7 @@ if uploaded_file is not None:
     # LECTURE CSV
     # =====================================================
 
-    df = pd.read_csv(uploaded_file,sep=None,
-        engine='python')
+    df = pd.read_csv(uploaded_file, low_memory=False)
 
     st.success("✅ Fichier chargé avec succès")
 
